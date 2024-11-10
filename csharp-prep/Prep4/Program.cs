@@ -7,18 +7,18 @@ class Program
     {
         List<int> numbers = new List<int>();
         
-        int userNumber = -1;
-        while (userNumber != 0)
+        int numberuser = -1;
+        while (numberuser != 0)
         {
             Console.Write("Enter a number (0 to quit): ");
             
-            string userResponse = Console.ReadLine();
-            userNumber = int.Parse(userResponse);
+            string response = Console.ReadLine();
+            numberuser = int.Parse(response);
             
-            // Only add the number to the list if it is not 0
-            if (userNumber != 0)
+          
+            if (numberuser != 0)
             {
-                numbers.Add(userNumber);
+                numbers.Add(numberuser);
             }
         }
 
@@ -32,17 +32,11 @@ class Program
         Console.WriteLine($"The sum is: {sum}");
 
         // Part 2: Compute the average
-        // Notice that we first cast the sum variable to be a float. Otherwise, because
-        // both the sum and the count are integers, the computer will do integer division
-        // and I will not get a decimal value (even though it puts the result into a float variable).
-
-        // By making one of the variables a float first, the computer knows that it has to
-        // do the floating point division, and we get the decimal value that we expect.
+        
         float average = ((float)sum) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
 
         // Part 3: Find the max
-        // There are several ways to do this, such as sorting the list
         
         int max = numbers[0];
 
