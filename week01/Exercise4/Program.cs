@@ -42,6 +42,7 @@ class Program
             Console.Write("Enter number: ");
             string strnumber = Console.ReadLine();
             number = int.Parse(strnumber);
+           /* number = int.Parse(Console.ReadLine()); */
 
             if (number != 0)
             {
