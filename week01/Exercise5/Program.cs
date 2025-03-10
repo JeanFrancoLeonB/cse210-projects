@@ -50,6 +50,7 @@ class Program
         }
         */
 
+
         static void DisplayWelcome()
 
         {
@@ -58,7 +59,7 @@ class Program
 
         DisplayWelcome();
 
-
+        /*
         static string PromptUserName()
         {
 
@@ -68,9 +69,6 @@ class Program
             return UserName;
         }
 
-       
-
-
         static int PromptUserNumber()
         {
             Console.Write("Please enter your favorite number: ");
@@ -79,8 +77,6 @@ class Program
             return number;
 
         }
-
-
 
         static int SquareNumber(int sqrnumber)
         {
@@ -102,6 +98,43 @@ class Program
         }
 
         DisplayResult(userName, squaredNumber);
+    */
+
+        static string PromptUserName()
+        {
+            Console.Write("Please enter your name: ");
+            string userName = Console.ReadLine();
+            return userName;
+        }
+
+        static int PromptUserNumber()
+        {
+            Console.Write("Please enter your favorite number: ");
+            int userNumber = int.Parse(Console.ReadLine());
+            return userNumber;
+        }
+
+        static int SquareNumber(int sqrnumberofuser)
+        {
+          
+            int squarex = sqrnumberofuser * sqrnumberofuser;
+
+            return squarex;
+        }
+
+
+        string nombre = PromptUserName();
+        int numero = PromptUserNumber();
+        int numerocuadrado = SquareNumber(numero);
+
+
+        static void DisplayResult(string name, int square)
+        {
+            Console.WriteLine($"{name}, the square of your number is {square}.");
+        }
+
+         DisplayResult(nombre, numerocuadrado);
+
 
     }
 }
