@@ -7,7 +7,8 @@ public class Journal
     private List<Entry> _entries = new List<Entry>();
 
 
-    /* sobrenombre de la clase Entry porque nos encontramos en la clase journal */
+    /* sobrenombre de la clase Entry porque nos encontramos en la clase journal 
+    nombre del parametro newEntry y el tipo de parametro Entry (clase)*/
     public void AddEntry(Entry newEntry)
     {
         _entries.Add(newEntry);
@@ -16,14 +17,18 @@ public class Journal
 
     public void DisplayAll()
     {
-      
+        if (_entries.Count == 0)
+        {
+            Console.WriteLine($"La lista se encuentra Vacía");
+            return;
+        }
+
+        foreach (Entry displays in _entries)
+        {
+            displays.Display();
+        }
+
     }
-
-
-
-
-
-
 
 
     public void SaveToFile(string file)
@@ -70,7 +75,7 @@ public class Journal
 
 
         }
-        Console.WriteLine($"Guardado con Exito");
+        Console.WriteLine($"El archivo se cargo con Exito");
     }
 
 }
