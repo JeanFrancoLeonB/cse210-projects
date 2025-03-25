@@ -17,17 +17,34 @@ public class Fraction
         _top = top;
         _bottom = bottom;
     }
+  public int GetTop()
+    {
+        return _top;
+    }
+
+    public void SetTop(int top)
+    {
+        _top = top;
+    }
+  public int GetBottom()
+    {
+        return _bottom;
+    }
+
+    public void SetBottom(int bottom)
+    {
+        _bottom = bottom;
+    }
+
     public string GetFractionString()
     {
-        string text = $"{_top}/{_bottom}";
+        string text = $"{GetTop()}/{GetBottom()}";
         return text;
     }
     public double GetDecimalValue()
     {
-        return (double) _top / (double)_bottom;
+        return (double) GetTop() / (double)GetBottom();
     }
-
-
 }
 
 
