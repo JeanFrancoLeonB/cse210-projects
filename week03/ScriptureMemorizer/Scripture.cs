@@ -46,6 +46,7 @@ public class Scripture
     }
     public string GetDisplayText()
     {
+        /*\n es el enter*/
         string despliegatexto = _reference.GetDisplayText() + "\n ";
 
         foreach (Word z in _words)
