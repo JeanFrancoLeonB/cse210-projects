@@ -27,6 +27,10 @@ class Program
         Console.WriteLine(book4.GetPictureBookInfo());
 
 
+            
+            /*Segundo Ejercicio*/
+
+
 
         // Create a base "Assignment" object
         Assignment a1 = new Assignment("Samuel Bennett", "Multiplication");
