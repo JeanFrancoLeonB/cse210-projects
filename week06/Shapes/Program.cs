@@ -5,9 +5,9 @@ using System.Collections.Generic;
 class Program
 {
     static void Main(string[] args)
-    {/*
+    {
         Console.WriteLine("Hello World! This is the Shapes Project.");
-
+    /*
         HourlyEmployee hEmployee = new HourlyEmployee();
         hEmployee.SetName("Jhon");
         hEmployee.SetIdNumber("123abc");
@@ -69,7 +69,7 @@ class Program
         float pay = employee.GetPay();
         Console.WriteLine($"{employee.Getname()} will be paid ${pay}");
     }
-    */
     
+    */
 
 }
