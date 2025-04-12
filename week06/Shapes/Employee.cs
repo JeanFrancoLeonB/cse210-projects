@@ -1,5 +1,5 @@
 using System;
-public class Employee
+public abstract class Employee
 {
     protected string _name;
     protected string _idnumber;
@@ -27,4 +27,6 @@ public class Employee
         _idnumber = idNumber;
     }
 
+    public abstract float GetPay();
+    
 }

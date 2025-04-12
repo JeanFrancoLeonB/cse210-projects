@@ -16,4 +16,8 @@ public class SalaryEmployee : Employee
         _salary = salary;
     }
 
+    public override float GetPay()
+    {
+        return _salary/12;
+    }
 }

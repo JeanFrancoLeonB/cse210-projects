@@ -17,12 +17,17 @@ public class HourlyEmployee : Employee
     {
         _payRate = payRate;
     }
-    public int GetHoursWorked
+    public int GetHoursWorked()
     {
         return _hoursWorked;
     }
     public void SetHoursWorked(int hoursworked)
     {
         _hoursWorked = hoursworked;
+    }
+
+    public override float GetPay()
+    {
+        return _hoursWorked * _payRate;
     }
 }
