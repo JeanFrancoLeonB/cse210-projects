@@ -31,24 +31,32 @@ public class GoalManager
             Console.WriteLine("2. List Goals");
             Console.WriteLine("3. Save Goals");
             Console.WriteLine("4. Load Goals");
-            Console.WriteLine("5. Quit:");
+            Console.WriteLine("5. Record Goals");
+            Console.WriteLine("6. Quit:");
             Console.Write("Select a CHoice from menu:");
-            int eligenumero = int.Parse(Console.ReadLine());
+            string eligenumero = Console.ReadLine();
+         
+
             switch (eligenumero)
             {
-                case 1:
+                case "1":
                     CreateGoal();
                     break;
-                case 2:
-                    ListGoalDetails();
+                case "2":
+                    ListGoalDetails(); 
+                    Console.WriteLine("Goals Listed. Press enter to continue...");
+                    Console.ReadLine();
                     break;
-                case 3:
+                case "3":
                     SaveGoals();
                     break;
-                case 4:
+                case "4":
                     LoadGoals();
                     break;
-                case 5:
+                case "5":
+                    RecordEvent();
+                    break;
+                case "6":
                     started = false;
                     break;
             }
@@ -69,7 +77,6 @@ public class GoalManager
     }
     public void ListGoalDetails()
     {
-
         foreach (Goal goal in _goals)
         {
             Console.WriteLine(goal.GetDetailsString());
@@ -91,17 +98,17 @@ public class GoalManager
 
         string eligepuntosmeta = Console.ReadLine();
 
-        switch (eligepuntosmeta)
+        switch (eligenumerometa)
         {
-            case "1":
+            case 1:
                 Goal meta = new SimpleGoal(eligenombremeta, eligedescripcionmeta, eligepuntosmeta);
                 _goals.Add(meta);
                 break;
-            case "2":
+            case 2:
                 Goal eternameta = new EternalGoal(eligenombremeta, eligedescripcionmeta, eligepuntosmeta);
                 _goals.Add(eternameta);
                 break;
-            case "3":
+            case 3:
                 Console.Write("How many times does this goal need to be accomplished for a bonus?:");
                 int target = int.Parse(Console.ReadLine());
                 Console.Write("What is the bonus for accomplishing it that many times?:");
